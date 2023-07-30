@@ -1,4 +1,4 @@
-# PhySMC.jl - Physical simulation safe of Probabalistic programming
+# PhySMC.jl - Physical simulation safe for Probabalistic programming
 
 > NOTE!: this is a work in progress and the API is NOT stable
 
