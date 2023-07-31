@@ -2,6 +2,15 @@ module PhySMC
 
 using Gen
 
+export PhySim,
+    PhyState,
+    Element,
+    ElemState,
+    ElemLatents,
+    step,
+    sync!,
+    forward_step
+
 """ Parameters for a physics engine """
 abstract type PhySim end
 
