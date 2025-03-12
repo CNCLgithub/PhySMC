@@ -1,12 +1,12 @@
-# PhySMC.jl - Physical simulation safe for Probabalistic programming
+# PhySMC.jl - Physical Simulation Safe for Probabilistic Programming
 
 > NOTE!: this is a work in progress and the API is NOT stable
 
-The purpose of PhySMC is to properly interface physics engines with probablistic programming. Probabalistic programming, especially of the flavor found in [Gen](https://www.gen.dev/), composes stochastic computation with deterministic or [pure functions](https://en.wikipedia.org/wiki/Pure_function) (e.g., every time f is called with argument x you get the same result y). However, physics engines often rely in interal state (usually to cache computations) which can pose an issue for integrating them with Gen. For example, generative multiple traces using the same engine context (such as a particle filter) can lead to unintended side-effects when using `Gen.update`.
+The purpose of PhySMC is to properly interface physics engines with probabilistic programming. Probabilistic programming, especially of the flavor found in [Gen](https://www.gen.dev/), composes stochastic computation with deterministic or [pure functions](https://en.wikipedia.org/wiki/Pure_function) (e.g., every time f is called with argument x you get the same result y). However, physics engines often rely on internal state (usually to cache computations), which can pose an issue for integrating them with Gen. For example, generating multiple traces using the same engine context (such as a particle filter) can lead to unintended side-effects when using `Gen.update`.
 
-PhySMC provides and interface where calls to physics engines and retrieval / manipulation of state behaves in a pure way.
+PhySMC provides an interface where calls to physics engines and retrieval/manipulation of the state behave in a pure way.
 
-The interace is defined in https://github.com/CNCLgithub/PhySMC/blob/master/src/PhySMC.jl
+The interface is defined in https://github.com/CNCLgithub/PhySMC/blob/master/src/PhySMC.jl
 with the main function being `step`
 
 ```julia
